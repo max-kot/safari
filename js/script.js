@@ -87,7 +87,7 @@ menuLinks.forEach(function (link) {
 	})
 })
 
-/*---Footer Menu---*/
+/*---Footer Menu
 const footerMenuBtn = document.querySelector('.menu-btn');
 const footerMenu = document.querySelector('.footer__menu');
 
@@ -95,4 +95,4 @@ footerMenuBtn.addEventListener('click', function () {
 	footerMenu.classList.toggle('active');
 	footerMenuBtn.classList.toggle('active');
 
-})
+})---*/

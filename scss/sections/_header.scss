@@ -18,9 +18,15 @@
 		align-items: center;
 		justify-content: space-between;
 		padding-bottom: 15px;
-		border-bottom: 1px solid #fff;
 		& > * + * {
 			margin-left: 15px;
+			@media (max-width: 768px) {
+				margin-left: unset;
+				margin-top: 15px;
+			}
+		}
+		@media (max-width: 768px) {
+			flex-wrap: wrap;
 		}
 	}
 
@@ -29,6 +35,9 @@
 		transition: all 0.3s;
 		&:hover {
 			opacity: 0.7;
+		}
+		@media (max-width: 768px) {
+			flex: 0 1 100%;
 		}
 	}
 
@@ -43,6 +52,9 @@
 		line-height: 130%;
 		& + * {
 			margin-left: 19px;
+			@media (max-width: 768px) {
+				margin-left: unset;
+			}
 		}
 		@media (max-width: 768px) {
 			display: none;
@@ -54,7 +66,24 @@
 
 	&__menu {
 		padding: 27px 0 24px;
+		border-top: 1px solid #fff;
 		border-bottom: 1px solid #fff;
+		@media (max-width: 768px) {
+			position: absolute;
+			top: 173px;
+			right: -100%;
+			left: auto;
+			min-width: 320px;
+			height: calc(100vh - 173px);
+			overflow: auto;
+			transition: right 0.3s;
+			background: rgba(31, 30, 30, 0.5);
+			backdrop-filter: blur(5px);
+			border: unset;
+			&.active {
+				right: 0;
+			}
+		}
 	}
 }
 .logo {
@@ -85,11 +114,19 @@
 	&__list {
 		display: flex;
 		justify-content: space-evenly;
+		@media (max-width: 768px) {
+			flex-direction: column;
+			align-items: center;
+		}
 	}
 
 	&__item {
 		& + * {
 			margin-left: 15px;
+			@media (max-width: 768px) {
+				margin-left: unset;
+				margin-top: 25px;
+			}
 		}
 	}
 
@@ -97,6 +134,66 @@
 		transition: all 0.3s;
 		&:hover {
 			opacity: 0.7;
+		}
+		@media (max-width: 768px) {
+			font-size: 20px;
+		}
+	}
+}
+.burger-btn {
+	display: none;
+	cursor: pointer;
+	padding: 0;
+	border: 0;
+	background: transparent;
+	position: relative;
+	z-index: 55;
+	width: 40px;
+	height: 30px;
+	justify-content: center;
+	align-items: center;
+
+	@media (max-width: 768px) {
+		display: block;
+	}
+	&.active {
+		span {
+			background-color: transparent;
+			&::before {
+				transform: rotate(45deg);
+				top: 0;
+				transition: all 0.3s;
+			}
+			&::after {
+				transform: rotate(-45deg);
+				top: 0;
+				transition: all 0.3s;
+			}
+		}
+	}
+	span {
+		display: block;
+		position: relative;
+		width: 40px;
+		height: 3px;
+		background-color: #886239;
+		&::before,
+		&::after {
+			position: absolute;
+			content: "";
+			display: block;
+			width: 40px;
+			height: 3px;
+			background-color: #886239;
+			transition: all 0.3s;
+		}
+		&::before {
+			left: 0;
+			top: 10px;
+		}
+		&::after {
+			left: 0;
+			top: -10px;
 		}
 	}
 }

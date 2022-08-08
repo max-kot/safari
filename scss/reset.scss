@@ -1,0 +1,128 @@
+/*--- Style Reset ---*/
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+	padding: 0;
+	margin: 0;
+	border: none;
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+/*--- Links ---*/
+
+a {
+	color: inherit;
+}
+a,
+a:visited {
+	text-decoration: none;
+	display: inline-block;
+}
+a:hover {
+	text-decoration: none;
+}
+a:focus,
+a:active {
+	outline: none;
+}
+
+/*--- Common ---*/
+aside,
+nav,
+footer,
+header,
+section,
+main {
+	display: block;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+figure,
+blockquote,
+dl,
+dd {
+	padding: 0;
+	margin: 0;
+	font-size: inherit;
+	font-weight: inherit;
+	line-height: inherit;
+}
+
+ul,
+ol {
+	list-style: none;
+}
+
+img,
+svg,
+video,
+picture {
+	max-width: 100%;
+	height: auto;
+	display: block;
+}
+
+/*--- Form ---*/
+input,
+textarea,
+button,
+select {
+	font-family: inherit;
+	font-size: inherit;
+}
+
+input::-ms-clear {
+	// убираем крестик при вводе в IE
+	display: none;
+}
+
+button,
+input[type="submit"] {
+	display: inline-block;
+	box-shadow: none;
+	background-color: transparent;
+	background: none;
+	cursor: pointer;
+}
+
+input:focus,
+input:active,
+button:focus,
+button:active {
+	outline: none;
+}
+
+button::-moz-focus-inner {
+	// убираем отступы у кнопок в Mozila
+	padding: 0;
+	border: 0;
+}
+
+label {
+	cursor: pointer;
+}
+
+legend {
+	display: block;
+}
+
+/* Set core root defaults */
+html:focus-within {
+	scroll-behavior: smooth;
+}
+
+/* Set core body defaults */
+body {
+	min-height: 100vh;
+	text-rendering: optimizeSpeed;
+	line-height: 1.5;
+}

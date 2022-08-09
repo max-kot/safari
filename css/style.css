@@ -46,7 +46,7 @@ body {
   font-size: 18px;
   line-height: 140%;
   color: #1f1e1e;
-  background: #fff;
+  background: #e5e5e5;
 }
 
 /*--- Utility ---*/
@@ -96,6 +96,16 @@ body {
   height: 100%;
   -o-object-fit: cover;
      object-fit: cover;
+}
+
+.title {
+  font-weight: 500;
+  font-size: 36px;
+  line-height: 130%;
+}
+
+.title--white {
+  color: #fff;
 }
 
 .btn {
@@ -345,7 +355,6 @@ body {
 }
 .first__body {
   position: relative;
-  min-height: calc(100vh - 250px);
   display: flex;
   justify-content: flex-end;
   align-items: flex-start;
@@ -354,11 +363,6 @@ body {
 .first__body > * + * {
   margin-top: 20px;
 }
-@media (max-height: 850px) {
-  .first__body {
-    min-height: 100%;
-  }
-}
 .first__title {
   font-family: "PT Serif", serif;
   font-weight: 700;
@@ -366,16 +370,10 @@ body {
   line-height: 130%;
   text-align: center;
   margin: 0 auto;
-  position: absolute;
   top: 0;
   left: 0;
   right: 0;
-}
-@media (max-height: 850px) {
-  .first__title {
-    position: static;
-    margin-bottom: 250px;
-  }
+  margin-bottom: 250px;
 }
 @media (max-width: 1000px) {
   .first__title {
@@ -425,4 +423,98 @@ body {
   .first__btn-down {
     background: #1f1e1e;
   }
+}
+
+.trip {
+  padding: 100px 0;
+}
+@media (max-width: 1000px) {
+  .trip {
+    padding: 50px 0;
+  }
+}
+@media (max-width: 480px) {
+  .trip {
+    padding: 25px 0;
+  }
+}
+.trip__list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 32px;
+}
+@media (max-width: 1000px) {
+  .trip__list {
+    gap: 15px;
+  }
+}
+.trip__item {
+  position: relative;
+  border: 1px solid #d9d9de;
+  flex: 0 1 22.52%;
+  transition: all 0.3s;
+}
+.trip__item:hover {
+  transform: scale(1.2);
+  z-index: 2;
+}
+@media (max-width: 1000px) {
+  .trip__item {
+    flex: 0 1 31.98%;
+  }
+}
+@media (max-width: 768px) {
+  .trip__item {
+    flex: 0 1 48.33%;
+  }
+}
+@media (max-width: 480px) {
+  .trip__item {
+    flex: 1 1 100%;
+  }
+}
+.trip__link {
+  display: flex;
+  flex-direction: column;
+}
+.trip__image {
+  padding-bottom: 42%;
+}
+.trip__title {
+  padding: 12px 19px 19px;
+}
+
+.service {
+  background: url("../img/service/bg.jpg") center/cover no-repeat;
+  padding: 32px 0 51px;
+}
+.service__body > * + * {
+  margin-top: 52px;
+}
+.service__title {
+  text-align: center;
+}
+.service__list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 67px 52px;
+}
+.service__item {
+  flex: 0 1 20.98%;
+}
+.service__item > * + * {
+  margin-top: 15px;
+}
+.service__icon {
+  border: 1px solid #ffffff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 85px;
+  height: 85px;
+  border-radius: 50%;
+}
+.service__text {
+  color: #fff;
+  font-size: 16px;
 }

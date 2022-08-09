@@ -11,7 +11,7 @@ body {
 	font-size: 18px;
 	line-height: 140%;
 	color: #1f1e1e;
-	background: #fff;
+	background: #e5e5e5;
 }
 
 /*--- Utility ---*/
@@ -62,6 +62,12 @@ body {
 }
 
 .title {
+	font-weight: 500;
+	font-size: 36px;
+	line-height: 130%;
+}
+.title--white {
+	color: #fff;
 }
 
 .btn {

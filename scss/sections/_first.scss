@@ -20,16 +20,12 @@
 
 	&__body {
 		position: relative;
-		min-height: calc(100vh - 250px);
 		display: flex;
 		justify-content: flex-end;
 		align-items: flex-start;
 		flex-direction: column;
 		& > * + * {
 			margin-top: 20px;
-		}
-		@media (max-height: 850px) {
-			min-height: 100%;
 		}
 	}
 
@@ -40,14 +36,10 @@
 		line-height: 130%;
 		text-align: center;
 		margin: 0 auto;
-		position: absolute;
 		top: 0;
 		left: 0;
 		right: 0;
-		@media (max-height: 850px) {
-			position: static;
-			margin-bottom: 250px;
-		}
+		margin-bottom: 250px;
 		@media (max-width: 1000px) {
 			font-size: 70px;
 		}

@@ -1,0 +1,41 @@
+.service {
+	background: url("../img/service/bg.jpg") center/cover no-repeat;
+	padding: 32px 0 51px;
+	&__body {
+		& > * + * {
+			margin-top: 52px;
+		}
+	}
+
+	&__title {
+		text-align: center;
+	}
+
+	&__list {
+		display: flex;
+		flex-wrap: wrap;
+		gap: 67px 52px;
+	}
+
+	&__item {
+		flex: 0 1 20.98%;
+		& > * + * {
+			margin-top: 15px;
+		}
+	}
+
+	&__icon {
+		border: 1px solid #ffffff;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		width: 85px;
+		height: 85px;
+		border-radius: 50%;
+	}
+
+	&__text {
+		color: #fff;
+		font-size: 16px;
+	}
+}

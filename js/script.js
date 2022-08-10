@@ -96,3 +96,34 @@ footerMenuBtn.addEventListener('click', function () {
 	footerMenuBtn.classList.toggle('active');
 
 })---*/
+
+/*-- Video btn ---*/
+const videoBtn = document.querySelector('.about__play-btn');
+const videoBox = document.querySelector('.about__video-box');
+const videoBtnIcon = document.querySelector('.about__play-btn img');
+const videoOverlay = document.querySelector('.about__video-overlay')
+
+videoBtn.addEventListener('click', function () {
+	// оверлэй c кнопкой исчезает при отводе мыши от видео, а появляется при поялении мыши на видео
+	function toggleOverlay(event) {
+		if (event.type === 'mouseleave') {
+			videoOverlay.classList.add('hidden');
+		} else {
+			videoOverlay.classList.remove('hidden');
+		}
+	};
+
+	if (videoBox.paused) {
+		videoBox.play();
+		videoBtnIcon.src = 'img/about/pause.svg'; // меняет картинку на картинку с паузой
+		videoOverlay.onmouseleave = toggleOverlay; // события мыши при покидании мыши видео
+		videoOverlay.onmouseenter = toggleOverlay; // события мыши при появлении мыши на видео
+
+	} else {
+		videoBox.pause();
+		videoBtnIcon.src = 'img/about/play.svg'; // меняет картинку на картинку с плэем
+		videoBox.onmouseleave = null; // отменяет событие
+		videoBox.onmouseenter = null; // отменяет событие
+	}
+
+})

@@ -12,32 +12,35 @@
 	&__list {
 		display: flex;
 		flex-wrap: wrap;
-		gap: 32px;
+		margin: -16px;
 		@media (max-width: 1000px) {
-			gap: 15px;
+			margin: -8px;
 		}
 	}
 
 	&__item {
 		position: relative;
-		border: 1px solid #d9d9de;
-		flex: 0 1 22.52%;
+		flex: 0 1 25%;
+		padding: 16px;
 		transition: all 0.3s;
 		&:hover {
 			transform: scale(1.2);
 			z-index: 2;
 		}
 		@media (max-width: 1000px) {
-			flex: 0 1 31.98%;
+			flex: 0 1 33.333%;
+			padding: 8px;
 		}
 		@media (max-width: 768px) {
-			flex: 0 1 48.33%;
+			flex: 0 1 50%;
 		}
 		@media (max-width: 480px) {
 			flex: 1 1 100%;
 		}
 	}
-
+	&__item-wrapper {
+		border: 1px solid #d9d9de;
+	}
 	&__link {
 		display: flex;
 		flex-direction: column;

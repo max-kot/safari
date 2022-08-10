@@ -1,65 +1,25 @@
 $(function () {
-	$('.first-slider').slick({
-		dots: true,
+	$('.gallery__slider').slick({
 		infinite: true,
-		fade: true,
-		prevArrow: '<button type="button" class="slick-prev"><img src="img/first/arrow-prev.svg" alt="Previos"></button>',
-		nextArrow: '<button type="button" class="slick-next"><img src="img/first/arrow-next.svg" alt="Next"></button>',
+		speed: 800,
+		slidesPerRow: 3,
+		rows: 2,
+		prevArrow: '<button type="button" class="slick-prev"><img src="img/gallery/prev.svg" alt="Previos"></button>',
+		nextArrow: '<button type="button" class="slick-next"><img src="img/gallery/next.svg" alt="Next"></button>',
 		responsive: [
 			{
 				breakpoint: 769,
 				settings: {
-					prevArrow: '<button type="button" class="slick-prev"><img src="img/first/arrow-prev-grey.svg" alt="Previos"></button>',
-					nextArrow: '<button type="button" class="slick-next"><img src="img/first/arrow-next-grey.svg" alt="Next"></button>',
-				}
-			},
-		],
-	});
-
-	/*--- Product sliders ----*/
-	$('.product-slider-info').slick({
-		slidesToShow: 1,
-		slidesToScroll: 1,
-		arrows: false,
-		vertical: true,
-		verticalSwiping: true,
-		asNavFor: '.product-slider-title',
-		responsive: [
-			{
-				breakpoint: 1001,
-				settings: {
-					vertical: false,
-					swipe: false,
-				}
-			},
-		],
-
-	});
-	$('.product-slider-title').slick({
-		slidesToShow: 5,
-		slidesToScroll: 1,
-		asNavFor: '.product-slider-info',
-		arrows: true,
-		focusOnSelect: true,
-		centerMode: true,
-		vertical: true,
-		prevArrow: '<button type="button" class="product-slider-title__prev slick-prev"><img src="img/product/prev.svg" alt="Previos"></button>',
-		nextArrow: '<button type="button" class="product-slider-title__next slick-next"><img src="img/product/next.svg" alt="Next"></button>',
-		responsive: [
-			{
-				breakpoint: 1001,
-				settings: {
-					vertical: false,
-					slidesToShow: 3,
+					slidesPerRow: 2,
+					rows: 2,
 				}
 			},
 			{
-				breakpoint: 769,
+				breakpoint: 481,
 				settings: {
-					slidesToShow: 1,
-					vertical: false,
-				},
-
+					slidesPerRow: 1,
+					rows: 1,
+				}
 			},
 		],
 	});
@@ -116,12 +76,14 @@ videoBtn.addEventListener('click', function () {
 	if (videoBox.paused) {
 		videoBox.play();
 		videoBtnIcon.src = 'img/about/pause.svg'; // меняет картинку на картинку с паузой
+		videoBtn.style.paddingLeft = '0';
 		videoOverlay.onmouseleave = toggleOverlay; // события мыши при покидании мыши видео
 		videoOverlay.onmouseenter = toggleOverlay; // события мыши при появлении мыши на видео
 
 	} else {
 		videoBox.pause();
 		videoBtnIcon.src = 'img/about/play.svg'; // меняет картинку на картинку с плэем
+		videoBtn.style.paddingLeft = '7px';
 		videoBox.onmouseleave = null; // отменяет событие
 		videoBox.onmouseenter = null; // отменяет событие
 	}

@@ -47,16 +47,6 @@ menuLinks.forEach(function (link) {
 	})
 })
 
-/*---Footer Menu
-const footerMenuBtn = document.querySelector('.menu-btn');
-const footerMenu = document.querySelector('.footer__menu');
-
-footerMenuBtn.addEventListener('click', function () {
-	footerMenu.classList.toggle('active');
-	footerMenuBtn.classList.toggle('active');
-
-})---*/
-
 /*-- Video btn ---*/
 const videoBtn = document.querySelector('.about__play-btn');
 const videoBox = document.querySelector('.about__video-box');

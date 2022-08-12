@@ -66,14 +66,14 @@ videoBtn.addEventListener('click', function () {
 	if (videoBox.paused) {
 		videoBox.play();
 		videoBtnIcon.src = 'img/about/pause.svg'; // меняет картинку на картинку с паузой
-		videoBtn.style.paddingLeft = '0';
+		videoBtn.style.marginLeft = '0';
 		videoOverlay.onmouseleave = toggleOverlay; // события мыши при покидании мыши видео
 		videoOverlay.onmouseenter = toggleOverlay; // события мыши при появлении мыши на видео
 
 	} else {
 		videoBox.pause();
 		videoBtnIcon.src = 'img/about/play.svg'; // меняет картинку на картинку с плэем
-		videoBtn.style.paddingLeft = '7px';
+		videoBtn.style.marginLeft = '7px';
 		videoBox.onmouseleave = null; // отменяет событие
 		videoBox.onmouseenter = null; // отменяет событие
 	}
